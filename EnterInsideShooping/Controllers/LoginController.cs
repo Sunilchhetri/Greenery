@@ -11,7 +11,7 @@ namespace EnterInsideShooping.Controllers
         // GET: Login
         public ActionResult Index()
         {
-            return Content("This is login page");
+            return View();
         }
         public ActionResult Create()
         {
