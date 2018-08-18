@@ -1,0 +1,104 @@
+﻿@model IEnumerable<EnterInsideShooping.Models.Product>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Layout/_MainLayout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.ProductName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Image)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.StorageId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SellStartDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SellEndDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IsNew)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Price)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Category.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Color.Color1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Model.Model1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Model.Model1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.User.Username)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.ProductName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Image)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.StorageId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SellStartDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SellEndDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IsNew)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Price)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Category.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Color.Color1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Model.Model1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Model.Model1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.User.Username)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ProductId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ProductId }) |
+            @using (Html.BeginForm("Delete", "ProductsManagement", new { id = item.ProductId }, FormMethod.Post, new { onsubmit = "return confirm('Are you sure you want to delete this?');" }))
+            {
+                @Html.AntiForgeryToken()
+                <input type="submit" value="Delete" class="buttonLink" />
+            }
+        </td>
+    </tr>
+}
+
+</table>

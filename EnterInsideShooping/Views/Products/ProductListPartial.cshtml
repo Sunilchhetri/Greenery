@@ -1,0 +1,28 @@
+﻿
+@using EnterInsideShooping.Models;
+@model List<Product>
+
+@{
+    foreach (var item in Model)
+    {
+        <div class="main-content">
+            <div class="content-image">
+          
+                <a href='@Url.Action("Details","Products",new { id=item.ProductId},null)'>
+                    <img src='@Url.Content("~/Media/Images/Layout/"+item.Image)' />
+            </a>
+            </div><!--content image-->
+            <div class="content-title">
+                @*<a href="#">@item.ProductName</a>*@
+                @Html.ActionLink(@item.ProductName,"Details","Products",new {id=item.ProductId},null)
+            </div><!--content-title-->
+            <div class="content-price">
+                Price:$@item.Price
+            </div><!--Content-price-->
+            <div class="content-price">
+                @Html.ActionLink("Add To Cart","OrderNow","ShoppingCart",new {id=item.ProductId},null)
+            </div><!--Content-price-->
+        </div><!--Main-Content-->
+
+    }
+}

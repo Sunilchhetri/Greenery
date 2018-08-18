@@ -1,0 +1,13 @@
+﻿@using EnterInsideShooping.Models
+@model List<Category>
+    @{ 
+        foreach (var item in Model)
+        {
+            <ul>
+                <li><a href="#">@item.Name</a></li>
+            </ul>
+        }
+    }
+
+
+

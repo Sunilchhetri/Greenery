@@ -1,0 +1,75 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <meta charset="utf-8" />
+    <link href="~/Content/style.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <script src="~/Scripts/jquery-1.10.2.js"></script>
+    <script src="~/Scripts/jquery.validate.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.js"></script>
+</head>
+<body>
+    <div class="div-container">
+        <div class="div-header">
+            Shopping Online - Get Reward
+        </div><!---div-header-->
+        <div class="div-topmenu">
+            <ul>
+                <li>
+                    @Html.ActionLink("Home", "Index", "Home")@*LinkText,ActionName,ControllerName*@
+                </li>
+                <li>
+                    @Html.ActionLink("News", "Index", "News")@*LinkText,ActionName,ControllerName*@
+                </li>
+                <li>
+                    @Html.ActionLink("Products", "Index", "Products")@*LinkText,ActionName,ControllerName*@
+                </li>
+              
+                <li>
+                    @Html.ActionLink("Manage Color","Index","Colors")@*LinkText,ActionName,ControllerName*@
+                </li>
+                <li>
+                    @Html.ActionLink("Manage News", "Index", "NewsManagement")@*LinkText,ActionName,ControllerName*@
+                </li>
+                <li>
+                    @Html.ActionLink("Manage Product", "Index", "ProductsManagement")@*LinkText,ActionName,ControllerName*@
+                </li>
+                <li>
+                    @Html.ActionLink("Contact Us", "Index", "ContactUs")@*LinkText,ActionName,ControllerName*@
+                </li>
+                <li>
+                    @Html.ActionLink("Cart", "Index", "ShoppingCart")@*LinkText,ActionName,ControllerName*@
+                </li>
+            </ul>
+
+        </div><!---div-topmenu-->
+        <div class="clear"></div>
+        <div class="div-left">
+            <div class="category-title">Category</div><!---category-title-->
+            <div class="category-list">
+               @Html.Action("CategoryPartial", "Category")
+            </div><!--Category-list-->
+        </div><!---div-left-->
+        <div class="div-main">
+            <div class="top-breadcrumb">
+                <ul>
+                    <li><a href="#">Home</a><span class="span-breadcrumb">>></span> </li>
+                    <li><a href="#">Product</a></li>
+                </ul>
+            </div><!--Top breadcrumb-->
+            <div class="clear"></div>
+            @RenderBody()
+
+
+        </div><!---div-main-->
+        <div class="clear"></div>
+        <div class="div-footer">
+            <p>Copyright &copy;2018 Greenery. All rights reserved. </p>
+            <p>Email:<a href="mailto:entersoftinside@gmail.com">entersoftinside</a></p>
+            <p>Facebook: <a href="https://facebook.com/entersoftinside">https://facebook.com/entersoftinside</a> </p>
+        </div><!---div-footer-->
+    </div><!--div-container-->
+</body>
+</html>
