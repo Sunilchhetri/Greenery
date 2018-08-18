@@ -13,5 +13,9 @@ namespace EnterInsideShooping.Controllers
         {
             return Content("This is login page");
         }
+        public ActionResult Create()
+        {
+            return View();
+        }
     }
 }
