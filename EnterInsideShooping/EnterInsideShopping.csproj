@@ -111,6 +111,7 @@
     <Content Include="Default.html" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
+    <Content Include="images\index.jpg" />
     <Content Include="Media\Images\Layout\158462-15819-Dell-XPS-14-Windows-8-compatible-laptop-back-side-view.png" />
     <Content Include="Media\Images\Layout\download.jpg" />
     <Content Include="Media\Images\Layout\Samsung-Mobile-Phone-PNG-Clipart.png" />
