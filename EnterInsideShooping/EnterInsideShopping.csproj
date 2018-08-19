@@ -111,6 +111,7 @@
     <Content Include="Default.html" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
+    <Content Include="images\index.jpg" />
     <Content Include="Media\Images\Layout\158462-15819-Dell-XPS-14-Windows-8-compatible-laptop-back-side-view.png" />
     <Content Include="Media\Images\Layout\download.jpg" />
     <Content Include="Media\Images\Layout\Samsung-Mobile-Phone-PNG-Clipart.png" />
@@ -248,6 +249,7 @@
     <Content Include="Views\Products\Details.cshtml" />
     <Content Include="Views\ShoppingCart\CheckOut.cshtml" />
     <Content Include="Views\ShoppingCart\OrderSuccess.cshtml" />
+    <Content Include="Views\Login\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -258,7 +260,6 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="images\upload\" />
-    <Folder Include="Views\Login\" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
