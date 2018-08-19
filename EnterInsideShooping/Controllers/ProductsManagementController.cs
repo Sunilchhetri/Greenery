@@ -57,7 +57,7 @@ namespace EnterInsideShooping.Controllers
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Create([Bind(Include = "ProductId,ProductName,Image,UserId,CategoryId,ColorId,ModelId,StorageId,SellStartDate,SellEndDate,IsNew,Price")] Product product)
-        {
+            {
             if (ModelState.IsValid)
             {
                 db.Products.Add(product);
