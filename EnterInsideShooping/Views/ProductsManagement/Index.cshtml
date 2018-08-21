@@ -36,15 +36,7 @@
         <th>
             @Html.DisplayNameFor(model => model.Category.Name)
         </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Color.Color1)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Model.Model1)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Model.Model1)
-        </th>
+        
         <th>
             @Html.DisplayNameFor(model => model.User.Username)
         </th>
@@ -57,7 +49,7 @@
             @Html.DisplayFor(modelItem => item.ProductName)
         </td>
         <td>
-           <img src="@Url.Content("~/Content/Images/index.jpg")" title="image"/>
+           @*<img src="@Url.Content("~/Content/Images/index.jpg")" title="image"/>*@
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.StorageId)
@@ -77,15 +69,7 @@
         <td>
             @Html.DisplayFor(modelItem => item.Category.Name)
         </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Color.Color1)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Model.Model1)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Model.Model1)
-        </td>
+    
         <td>
             @Html.DisplayFor(modelItem => item.User.Username)
         </td>

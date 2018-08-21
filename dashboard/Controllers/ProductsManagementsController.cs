@@ -8,11 +8,14 @@ using System.Web;
 using System.Web.Mvc;
 using EnterInsideShooping.Models;
 
-namespace EnterInsideShooping.Controllers
+namespace dashboard.Controllers
 {
-    public class ProductsManagementController : Controller
+    public class ProductsManagementsController : Controller
     {
         private GreeneryEntities db = new GreeneryEntities();
+
+        // GET: ProductsManagements
+
 
         // GET: Products1
         public ActionResult Index()
@@ -40,7 +43,7 @@ namespace EnterInsideShooping.Controllers
         public ActionResult Create()
         {
             ViewBag.CategoryId = new SelectList(db.Categories, "CategoryId", "Name");
-            
+
             ViewBag.StorageId = new SelectList(db.Storages, "StorageId", "Storage1");
             ViewBag.UserId = new SelectList(db.Users, "UserId", "Username");
             return View();
@@ -52,7 +55,7 @@ namespace EnterInsideShooping.Controllers
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Create([Bind(Include = "ProductId,ProductName,Image,UserId,CategoryId,ColorId,ModelId,StorageId,SellStartDate,SellEndDate,IsNew,Price")] Product product)
-            {
+        {
             if (ModelState.IsValid)
             {
                 db.Products.Add(product);
@@ -61,7 +64,7 @@ namespace EnterInsideShooping.Controllers
             }
 
             ViewBag.CategoryId = new SelectList(db.Categories, "CategoryId", "Name", product.CategoryId);
-            
+
             ViewBag.StorageId = new SelectList(db.Storages, "StorageId", "Storage1", product.StorageId);
             ViewBag.UserId = new SelectList(db.Users, "UserId", "Username", product.UserId);
             return View(product);
@@ -122,7 +125,7 @@ namespace EnterInsideShooping.Controllers
                 return HttpNotFound();
             }
             ViewBag.CategoryId = new SelectList(db.Categories, "CategoryId", "Name", product.CategoryId);
-        
+
             ViewBag.StorageId = new SelectList(db.Storages, "StorageId", "Storage1", product.StorageId);
             ViewBag.UserId = new SelectList(db.Users, "UserId", "Username", product.UserId);
             return View(product);
@@ -142,7 +145,7 @@ namespace EnterInsideShooping.Controllers
                 return RedirectToAction("Index");
             }
             ViewBag.CategoryId = new SelectList(db.Categories, "CategoryId", "Name", product.CategoryId);
-            
+
             ViewBag.StorageId = new SelectList(db.Storages, "StorageId", "Storage1", product.StorageId);
             ViewBag.UserId = new SelectList(db.Users, "UserId", "Username", product.UserId);
             return View(product);

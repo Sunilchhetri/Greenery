@@ -25,8 +25,6 @@ namespace EnterInsideShooping.Models
         public string Image { get; set; }
         public Nullable<int> UserId { get; set; }
         public Nullable<int> CategoryId { get; set; }
-        public Nullable<int> ColorId { get; set; }
-        public Nullable<int> ModelId { get; set; }
         public Nullable<int> StorageId { get; set; }
         public Nullable<System.DateTime> SellStartDate { get; set; }
         public Nullable<System.DateTime> SellEndDate { get; set; }
@@ -34,8 +32,6 @@ namespace EnterInsideShooping.Models
         public Nullable<double> Price { get; set; }
     
         public virtual Category Category { get; set; }
-        public virtual Color Color { get; set; }
-        public virtual Model Model { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<OrderDetail> OrderDetails { get; set; }
         public virtual Storage Storage { get; set; }

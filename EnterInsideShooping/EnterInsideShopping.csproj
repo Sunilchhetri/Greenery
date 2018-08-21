@@ -150,17 +150,13 @@
     </Content>
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\ContactUs\Index.cshtml" />
-    <Content Include="Views\News\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\CategoryController.cs" />
-    <Compile Include="Controllers\ColorsController.cs" />
     <Compile Include="Controllers\ContactUsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
-    <Compile Include="Controllers\NewsController.cs" />
-    <Compile Include="Controllers\NewsManagementController.cs" />
     <Compile Include="Controllers\ProductsManagementController.cs" />
     <Compile Include="Controllers\ProductsController.cs" />
     <Compile Include="Controllers\ShoppingCartController.cs" />
@@ -169,9 +165,6 @@
     </Compile>
     <Compile Include="Models\Cart.cs" />
     <Compile Include="Models\Category.cs">
-      <DependentUpon>Greenery.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\Color.cs">
       <DependentUpon>Greenery.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Greenery.Context.cs">
@@ -188,12 +181,6 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Greenery.edmx</DependentUpon>
-    </Compile>
-    <Compile Include="Models\Model.cs">
-      <DependentUpon>Greenery.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\News.cs">
-      <DependentUpon>Greenery.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Order.cs">
       <DependentUpon>Greenery.tt</DependentUpon>
@@ -224,32 +211,21 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
     <Content Include="Views\Category\CategoryPartial.cshtml" />
     <Content Include="Views\Products\ProductListPartial.cshtml" />
-    <Content Include="Views\News\NewsListPartial.cshtml" />
     <Content Include="Views\Category\Index.cshtml" />
     <Content Include="Views\Category\Create.cshtml" />
     <Content Include="Views\Category\Edit.cshtml" />
     <Content Include="Views\Category\Details.cshtml" />
-    <Content Include="Views\Colors\Create.cshtml" />
-    <Content Include="Views\Colors\Delete.cshtml" />
-    <Content Include="Views\Colors\Details.cshtml" />
-    <Content Include="Views\Colors\Edit.cshtml" />
-    <Content Include="Views\Colors\Index.cshtml" />
-    <Content Include="Views\NewsManagement\Create.cshtml" />
-    <Content Include="Views\NewsManagement\Delete.cshtml" />
-    <Content Include="Views\NewsManagement\Details.cshtml" />
-    <Content Include="Views\NewsManagement\Edit.cshtml" />
-    <Content Include="Views\NewsManagement\Index.cshtml" />
     <Content Include="Views\Products\Index.cshtml" />
     <Content Include="Views\ProductsManagement\Create.cshtml" />
     <Content Include="Views\ProductsManagement\Delete.cshtml" />
     <Content Include="Views\ProductsManagement\Details.cshtml" />
     <Content Include="Views\ProductsManagement\Edit.cshtml" />
-    <Content Include="Views\ProductsManagement\Index.cshtml" />
     <Content Include="Views\ShoppingCart\Index.cshtml" />
     <Content Include="Views\Products\Details.cshtml" />
     <Content Include="Views\ShoppingCart\CheckOut.cshtml" />
     <Content Include="Views\ShoppingCart\OrderSuccess.cshtml" />
     <Content Include="Views\Login\Index.cshtml" />
+    <Content Include="Views\ProductsManagement\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
