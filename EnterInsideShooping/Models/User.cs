@@ -12,10 +12,10 @@ namespace EnterInsideShooping.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class Users
+    public partial class User
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Users()
+        public User()
         {
             this.Products = new HashSet<Product>();
         }

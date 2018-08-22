@@ -201,6 +201,11 @@
     <Content Include="Areas\Dashboard\Views\ProductsManagements\Edit.cshtml" />
     <Content Include="Areas\Dashboard\Views\ProductsManagements\Delete.cshtml" />
     <Content Include="Areas\Dashboard\images\Thumbs.db" />
+    <Content Include="Areas\Dashboard\Views\Category\Index.cshtml" />
+    <Content Include="Areas\Dashboard\Views\Category\Create.cshtml" />
+    <Content Include="Areas\Dashboard\Views\Category\Edit.cshtml" />
+    <Content Include="Areas\Dashboard\Views\Category\Details.cshtml" />
+    <Content Include="Areas\Dashboard\Views\Category\Deleteconfirmed.cshtml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -218,10 +223,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Areas\Dashboard\Controllers\CategoryController.cs" />
     <Compile Include="Areas\Dashboard\Controllers\DashboardController.cs" />
     <Compile Include="Areas\Dashboard\Controllers\ProductsManagementsController.cs" />
     <Compile Include="Areas\Dashboard\DashboardAreaRegistration.cs" />
-    <Compile Include="Controllers\CategoryController.cs" />
     <Compile Include="Controllers\ContactUsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
@@ -277,12 +282,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
-    <Content Include="Views\Category\CategoryPartial.cshtml" />
     <Content Include="Views\Products\ProductListPartial.cshtml" />
-    <Content Include="Views\Category\Index.cshtml" />
-    <Content Include="Views\Category\Create.cshtml" />
-    <Content Include="Views\Category\Edit.cshtml" />
-    <Content Include="Views\Category\Details.cshtml" />
     <Content Include="Views\Products\Index.cshtml" />
     <Content Include="Views\ProductsManagement\Create.cshtml" />
     <Content Include="Views\ProductsManagement\Delete.cshtml" />

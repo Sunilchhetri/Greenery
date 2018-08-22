@@ -17,7 +17,7 @@ namespace EnterInsideShooping.Controllers
             return View();
         }
         [HttpPost]
-        public ActionResult Index(Users data)
+        public ActionResult Index(User data)
         {
             var checklogin = db.Users.Where(x => x.Username == data.Username && x.Password == data.Password).Count();
 
@@ -26,9 +26,14 @@ namespace EnterInsideShooping.Controllers
                 return RedirectToAction("Index", "Products");
 
             }
-            ViewBag.msg = "Incorrect password or username";
+            else
+            {
+
+                
+                
+            }
+
             return View();
-            
         }
     }
 }

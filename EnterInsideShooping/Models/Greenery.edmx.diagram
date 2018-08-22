@@ -9,12 +9,12 @@
         <EntityTypeShape EntityType="GreeneryModel.OrderDetail" Width="1.5" PointX="8.25" PointY="6.125" IsExpanded="true" />
         <EntityTypeShape EntityType="GreeneryModel.Order" Width="1.5" PointX="6" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="GreeneryModel.Storage" Width="1.5" PointX="3.75" PointY="11.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="GreeneryModel.User" Width="1.5" PointX="0.75" PointY="6.25" IsExpanded="true" />
         <AssociationConnector Association="GreeneryModel.FK_OrderDetail_Order" ManuallyRouted="false" />
         <EntityTypeShape EntityType="GreeneryModel.Product" Width="1.5" PointX="6" PointY="6" />
         <AssociationConnector Association="GreeneryModel.FK_Product_Category" />
         <AssociationConnector Association="GreeneryModel.FK_OrderDetail_Product" />
         <AssociationConnector Association="GreeneryModel.FK_Product_Storage" />
+        <EntityTypeShape EntityType="GreeneryModel.User" Width="1.5" PointX="2.875" PointY="6.625" />
         <AssociationConnector Association="GreeneryModel.FK_Product_User" />
       </Diagram>
     </edmx:Diagrams>
